@@ -1,0 +1,20 @@
+package org.tnsindia.repo;
+
+import java.sql.ResultSet;
+
+import org.tnsindia.entities.Employee;
+import java.sql.PreparedStatement;
+
+
+public interface EmployeeRepo {
+	
+	//to execute a query use Statement
+		java.sql.Statement createStatement();
+		PreparedStatement createPrepareStatement(String query);
+		public ResultSet retreive(String query);
+		public int add(String query, Employee emp);
+		public int update(String query, Employee emp);
+		public int delete(String query);
+
+
+}
